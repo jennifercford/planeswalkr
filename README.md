@@ -9,14 +9,15 @@ A Magic the Gathering deck building and card trading platform.
 
 ## Setup
 
-Obviously, you'll want to `git clone` this project, `bundle`, and run migrations
+Obviously, you'll want to `git clone` this project in your projects folder, `bundle`,
+create a database  `createdb databasename`, and run migrations
 with `rake db:migrate` as with any other Rails project.
 
 Then create a new User via `rails c` complete with admin privileges.
-For example, `u = User.create(email: "brit@lies.com", password: "cookies", admin: true)`
+For example, `u = User.create(full_name: "Britton Butler", email: "brit@lies.com", password: "cookies", admin: true)`
 
 Afterwards you should make sure to load any desired card set data from
 [MtG JSON][mtg-sets]. You're on your own for a source of card images,
-unfortunately.
+unfortunately. Note not the zipped folder but the actual set link saved somewhere, ie. desktop.
 
-[mtg-sets]: http://mtgjson.com/sets.html 
+[mtg-sets]: http://mtgjson.com/sets.html
