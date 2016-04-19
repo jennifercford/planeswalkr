@@ -33,4 +33,9 @@ class CardsetsController < ApplicationController
     @cardset = CardSet.find_by!(code: params[:id])
     render :show
   end
+
+  def index
+    @cardsets = CardSet.all
+    render :index
+  end
 end
