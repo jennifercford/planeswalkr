@@ -1,13 +1,18 @@
-<h1><%= @cardset.name %></h1>
-
-<ul class="card-images">
-  <% @cardset.cards.each do |card| %>
-    <li class="card-image">
-        <%= image_tag(card.image_url) %>
-    </li>
-  <% end %>
-</ul>
-
 <%= link_to("Homepage", root_path) %>
 
 Cool. Cool cool cool.
+</br>
+</br>
+<table>
+  <thead><%= @cardset.name %></thead>
+  </br>
+  </br>
+
+     <tbody class="card-images">
+        <% @cardset.cards.each do |card| %>
+        <tr class="card-image">
+          <%= image_tag(card.image_url) %>
+        </tr>
+        <% end %>
+    </tbody>
+    </table>
