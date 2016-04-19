@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   post "/login", to: "sessions#create"
   delete "/login", to: "sessions#destroy"
 
-  resources :cardsets, only: [:new, :create, :show]
+  resources :cardsets
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
