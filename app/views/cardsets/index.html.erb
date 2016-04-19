@@ -1,11 +1,12 @@
-<h1> Card Sets </h1>
+<%= link_to("Homepage", root_path)%>
+<h1 class= "page_header"> Magic the Gathering Editions and Sets </h1>
+
 
 <ul class="cardset">
   <%@cardsets.each do |cardset|%>
   <li class="cardset">
     <%= link_to(cardset.name, cardset_path(cardset.code))%>
+    <%= cardset.release_date%>
   </li>
   <%end%>
 </ul>
-
-<%= link_to("Homepage", root_path)%>
