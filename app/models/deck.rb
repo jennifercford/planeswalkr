@@ -17,7 +17,7 @@ class Deck < ActiveRecord::Base
   end
 
   def sample_deck
-    self.sample(7)
+    self.cards.sample(7)
   end
 end
 
