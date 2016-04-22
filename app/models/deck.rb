@@ -19,6 +19,19 @@ class Deck < ActiveRecord::Base
   def sample_deck
     self.cards.sample(7)
   end
+
+  def card_type_curve
+    type_count = Hash.new
+    card_type = self.cards.card_type.to_a
+    card_type.each do |type|
+      if type_count.has_key?(type)
+        type_count[type]+= 1
+      else
+        type_count[type] = 1
+      end
+    end
+  end
+
 end
 
 #deck.add_cards([["Forest", 3], ["Plague Rats", 2], ["Bad Moon", 1]])
